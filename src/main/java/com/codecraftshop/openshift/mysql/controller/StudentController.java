@@ -15,6 +15,7 @@ public class StudentController {
 	@Autowired
 	private StudentRepository studentRepository;
 	
+	@CrossOrigin(maxAge = 3600)
 	@RequestMapping(value="/students")
 	public List<Student> getStudents(){
 		return (List<Student>) studentRepository.findAll();
