@@ -19,4 +19,9 @@ public class StudentController {
 	public List<Student> getStudents(){
 		return (List<Student>) studentRepository.findAll();
 	}
+	
+	@PostMapping("/add")
+	public User createUser(@Valid @RequestBody Student student) {
+		return studentRepository.save(student);
+	}
 }
