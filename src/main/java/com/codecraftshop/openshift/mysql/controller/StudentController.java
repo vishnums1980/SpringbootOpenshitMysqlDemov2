@@ -27,7 +27,7 @@ public class StudentController {
 	}
 	
 	@PostMapping("/add")
-	public User createUser(@Valid @RequestBody Student student) {
+	public Student createStudent(@Valid @RequestBody Student student) {
 		return studentRepository.save(student);
 	}
 }
